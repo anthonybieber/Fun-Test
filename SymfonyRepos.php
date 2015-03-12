@@ -9,7 +9,7 @@ use Helpers\SymfonyReposHelper;
 	
 	$view = IndexView::getView();
 
-	if(isset($_POST['SymfonyBundleRequestButton'])) {
+	if(isset($_GET['SymfonyBundleRequestButton'])) {
 		
 		$helper = new SymfonyReposHelper();
 
