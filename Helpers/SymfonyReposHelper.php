@@ -76,15 +76,15 @@ class SymfonyReposHelper {
 		ob_end_clean();
 
 		header('Content-Type: text/csv');
-    header('Content-Disposition: attachment;filename=SymfonyRepos.csv'); 
+	    header('Content-Disposition: attachment;filename=SymfonyRepos.csv'); 
 
-		$file = fopen('php://output', 'w');
-    fputcsv($file, array_keys($parsedContent['0']));
+			$file = fopen('php://output', 'w');
+	    fputcsv($file, array_keys($parsedContent['0']));
 
-    foreach($parsedContent as $values){
-        fputcsv($file, $values);
-    }
+	    foreach($parsedContent as $values){
+	        fputcsv($file, $values);
+	    }
 
-    fclose($file);
+	    fclose($file);
 	}
 }
